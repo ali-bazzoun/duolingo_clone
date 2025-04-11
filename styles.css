@@ -4,6 +4,13 @@
     --green: #58CC02;
   }
 
+  @font-face {
+    font-family: 'dinround_bold';
+    src: url('fonts/dinroundpro/dinroundpro_bold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
   body {
     background-color: var(--background-color);
   }
@@ -21,8 +28,10 @@
     text-transform: uppercase;
     cursor: pointer;
     height: 40px;
-    width: 139;
+    width: 139px;
     outline-color: rgb(88, 167, 0);
     box-shadow: rgb(88, 167, 0) 0px 4px 0px 0px;
     font-size: 15px;
+    font-family: 'dinround_bold', sans-serif;
+    font-weight: 700;
   }
