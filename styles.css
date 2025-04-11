@@ -1,0 +1,7 @@
+:root {
+    --background-color: #F1F7FB
+  }
+
+  body {
+    background-color: var(--background-color);
+  }
