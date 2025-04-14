@@ -1,42 +1,86 @@
-:root {
-    --background-color: #F1F7FB;
-    --white: #FFFFFF;
-    --green: #58CC02;
-  }
-
-  @font-face {
-    font-family: 'dinround_bold';
-    src: url('fonts/dinroundpro/dinroundpro_bold.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
+@font-face {
+  /* 1. Font identification */
+  font-family: 'din-round';
+  
+  /* 2. Source files (most important) */
+  src: url('fonts/dinroundpro/dinroundpro_medi.otf') format('opentype');
+  
+  /* 3. Font characteristics */
+  font-weight: 400;
+  font-style: normal;
 }
 
-  body {
-    background-color: var(--white);
-  }
+:root {
+  /* Color Palette */
+  --primary-color: #58CC02;
+  --secondary-color: #FFFFFF;
+  --border-color: #E5E5E5;
+  --button-hover: #4CAF50;
+}
 
-  header {
-    display: flex;
-    justify-content: space-around;
-    border-bottom-style: solid;
-    border-bottom-width: 2px;
-    background-color: var(--white);
-    border-color: rgb(229, 229, 229)
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
-  }
+body {
+  /* Box Model */
+  margin: 0;
+  padding: 0;
 
-  header > button {
-    background-color: var(--green);
-    color: var(--white);
-    border: none;
-    border-radius: 12px;
-    text-transform: uppercase;
-    cursor: pointer;
-    height: 40px;
-    width: 139px;
-    outline-color: rgb(88, 167, 0);
-    box-shadow: rgb(88, 167, 0) 0px 4px 0px 0px;
-    font-size: 15px;
-    font-family: 'dinround_bold', sans-serif;
-    font-weight: 700;
-  }
+  /* Color & Background */
+  background-color: var(--secondary-color);
+
+  /* Typography */
+  font-family: 'din-round';
+  font-weight: 700;
+}
+
+.site-header {
+  /* Box Model */
+  border-bottom: 2px solid var(--border-color);
+
+  /* Color & Background */
+  background-color: var(--secondary-color);
+}
+
+.site-header-container {
+  /* Box Model */
+  max-width: min(100%, 1000px);
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.get-started {
+  /* Box Model Properties */
+  width: 140px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 0 var(--button-hover);
+
+  /* Color & Background */
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+
+  /* Typography */
+  font-family: 'din-round';
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 1.2;
+  text-transform: uppercase;
+
+  /* Interaction & Behavior */
+  cursor: pointer;
+}
+
+.main-content {
+  /* Box Model */
+  padding: 2rem;
+}
